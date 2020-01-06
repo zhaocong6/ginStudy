@@ -9,6 +9,7 @@ require (
 
 replace (
 	github.com/zhaocong6/ginStudy/conf => ./pkg/conf
+	github.com/zhaocong6/ginStudy/e => ./pkg/e
 	github.com/zhaocong6/ginStudy/middleware => ./middleware
 	github.com/zhaocong6/ginStudy/models => ./models
 	github.com/zhaocong6/ginStudy/pkg/setting => ./pkg/setting
