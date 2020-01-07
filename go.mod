@@ -5,6 +5,7 @@ go 1.13
 require (
 	github.com/gin-gonic/gin v1.5.0
 	github.com/go-ini/ini v1.51.1 // indirect
+	github.com/unknwon/com v1.0.1 // indirect
 )
 
 replace (
@@ -14,4 +15,5 @@ replace (
 	github.com/zhaocong6/ginStudy/models => ./models
 	github.com/zhaocong6/ginStudy/pkg/setting => ./pkg/setting
 	github.com/zhaocong6/ginStudy/routers => ./routers
+	github.com/zhaocong6/ginStudy/util => ./pkg/util
 )
