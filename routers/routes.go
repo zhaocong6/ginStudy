@@ -13,6 +13,13 @@ func InitRouter() *gin.Engine {
 
 	gin.SetMode(setting.RunMode)
 
+	addV1Routes(r)
+
+	return r
+}
+
+//增加v1路由
+func addV1Routes(r *gin.Engine) *gin.RouterGroup {
 	apiV1 := r.Group("/api/v1")
 	{
 		apiV1.GET("/tags", v1.GetTags)
@@ -21,5 +28,5 @@ func InitRouter() *gin.Engine {
 		apiV1.DELETE("/tags/:id", v1.DelTag)
 	}
 
-	return r
+	return apiV1
 }
