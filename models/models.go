@@ -12,7 +12,7 @@ var db *gorm.DB
 func init() {
 
 	var (
-		err error
+		err                                  error
 		dbType, dbName, user, password, host string
 	)
 
