@@ -1,10 +1,8 @@
 package models
 
-import "github.com/jinzhu/gorm"
-
 //模型结构体
 type Tag struct {
-	gorm.Model
+	Model
 
 	Name       string `json:"name"`
 	CreatedBy  string `json:"created_by"`
@@ -13,14 +11,14 @@ type Tag struct {
 }
 
 //根据条件获取tags列表 返回数据指针
-func GetTags(pageNum int, pageSize int, maps interface{}) (tags *[]Tag) {
+func GetTags(pageNum int, pageSize int, maps interface{}) (tags []Tag) {
 	db.Where(maps).Offset(pageNum).Limit(pageSize).Find(&tags)
 
 	return
 }
 
 //获取tag总数量
-func GetTagTotalNum(maps interface{}) (count *int) {
+func GetTagTotalNum(maps interface{}) (count int) {
 	db.Model(&Tag{}).Where(maps).Count(&count)
 
 	return
