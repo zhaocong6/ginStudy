@@ -5,6 +5,7 @@ import (
 	"ginApi/pkg/setting"
 	"github.com/jinzhu/gorm"
 	"log"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
 
 var db *gorm.DB
