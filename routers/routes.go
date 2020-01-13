@@ -21,6 +21,8 @@ func InitRouter() *gin.Engine {
 //增加v1路由
 func addV1Routes(r *gin.Engine) *gin.RouterGroup {
 	apiV1 := r.Group("/api/v1")
+	apiV1.POST("auth", v1.GetAuth)
+
 	{
 		apiV1.GET("/tags", v1.GetTags)
 		apiV1.POST("/tags", v1.AddTag)
